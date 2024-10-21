@@ -1,0 +1,62 @@
+/* Styles for the container when radio button is selected */
+.selected {
+  border-color: #475569 !important;
+}
+
+/* Styles for the radio button */
+.radio-button {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #cbd5e1 !important;
+  outline: 2px solid #cbd5e1 !important;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.radio-button:hover {
+  border-color: #cbd5e1;
+}
+
+.radio-button.checked {
+  border-color: #475569;
+  outline-color: #475569;
+}
+
+.radio-button .radio-indicator {
+  width: 10px;
+  height: 10px;
+  background-color: #475569;
+  border-radius: 50%;
+}
+
+/* Custom Checkbox Root Styles */
+.custom-checkbox-root {
+  padding: 4px;
+  height: 24px !important;
+  width: 24px !important;
+  min-height: 24px;
+  min-width: 24px;
+  background-color: #cbd5e1;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-checkbox-root[data-state="checked"] {
+  background-color: #475569;
+}
+
+/* Custom Checkbox Indicator (Check Mark) Styles */
+.custom-checkbox-root .custom-checkbox-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff; /* Default check mark color */
+}
+
+.custom-checkbox-root[data-state="checked"] .custom-checkbox-indicator {
+  color: #ffffff; /* Check mark color when checked */
+}

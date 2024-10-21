@@ -1,0 +1,9 @@
+ErrorDocument 404 "Not Found"
+ErrorDocument 403 "Not Found"
+
+
+RewriteEngine On 
+
+RewriteCond %{REQUEST_URI} !/__graphql
+RewriteRule ^(.*)$ - [L,R=404]
+

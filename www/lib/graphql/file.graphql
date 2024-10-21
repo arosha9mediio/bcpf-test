@@ -1,0 +1,3 @@
+mutation createPresignedPost($type: String!,$path: String!) {
+  createPresignedPost(type: $type,path: $path,)
+}

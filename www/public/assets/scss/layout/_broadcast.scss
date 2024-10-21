@@ -1,0 +1,433 @@
+/*----------------------------------------*/
+/*  BROADCAST
+/*----------------------------------------*/
+
+.broadcast {
+  &__container {
+    video {
+      margin-top: -90px;
+
+      @media #{$sm} {
+        margin-top: 20px;
+        width: 100%;
+      }
+
+      @media #{$lg} {
+        width: 100%;
+      }
+    }
+
+    width: 100%;
+    margin-right: -20px;
+    // padding-right: 15px;
+    // padding-left: 15px;
+    // margin-right: auto;
+    // margin-left: auto;
+
+    &-top {
+      display: flex;
+
+      @media #{$sm} {
+        flex-direction: column;
+      }
+    }
+  }
+
+  @media #{$sm} {
+    .container {
+      max-width: 540px;
+    }
+  }
+
+  @media #{$md} {
+    .container {
+      max-width: 720px;
+    }
+  }
+
+  @media #{$lg} {
+    .container {
+      max-width: 960px;
+    }
+  }
+
+  @media #{$xxl} {
+    .container {
+      max-width: 1140px;
+    }
+  }
+
+  &__title {
+    font-size: 40px;
+    font-weight: 600;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--black-2);
+    margin-bottom: 18px;
+
+    &-2 {
+      font-size: 24px;
+      color: var(--white);
+    }
+  }
+
+  &__area {
+    background-color: var(--white);
+    padding-bottom: 120px;
+
+    &-notice {
+      background-image: url(/assets/imgs/bg/broadcast.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      overflow: hidden;
+      padding-bottom: 40px;
+      padding-top: 180px;
+    }
+
+    &-cms1 {
+      background-image: url(/assets/imgs/bg/broadcast.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      overflow: hidden;
+      padding-bottom: 40px;
+      padding-top: 180px;
+    }
+
+    &-cms2 {
+      background-image: url(/assets/imgs/bg/broadcast2.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center; // This will center the image both horizontally and vertically
+      overflow: hidden;
+      padding-bottom: 40px;
+      padding-top: 180px;
+    }
+
+    &-cms3 {
+      background-image: url(/assets/imgs/bg/broadcast3.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center; // This will center the image both horizontally and vertically
+      overflow: hidden;
+      padding-bottom: 40px;
+      padding-top: 180px;
+    }
+
+    &-cms4 {
+      background-image: url(/assets/imgs/bg/broadcast4.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center; // This will center the image both horizontally and vertically
+      overflow: hidden;
+      padding-bottom: 40px;
+      padding-top: 180px;
+    }
+
+    &-cms5 {
+      background-image: url(/assets/imgs/bg/broadcast5.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center; // This will center the image both horizontally and vertically
+      overflow: hidden;
+      padding-bottom: 40px;
+      padding-top: 180px;
+    }
+
+    &-cms6 {
+      background-image: url(/assets/imgs/bg/broadcast6.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center; // This will center the image both horizontally and vertically
+      overflow: hidden;
+      padding-bottom: 40px;
+      padding-top: 180px;
+    }
+
+    &-cms7 {
+      background-image: url(/assets/imgs/bg/broadcast7.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center; // This will center the image both horizontally and vertically
+      overflow: hidden;
+      padding-bottom: 40px;
+      padding-top: 180px;
+    }
+
+    &-cms8 {
+      background-image: url(/assets/imgs/bg/broadcast8.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center; // This will center the image both horizontally and vertically
+      overflow: hidden;
+      padding-bottom: 40px;
+      padding-top: 180px;
+    }
+
+    &-introduce {
+      height: 100vh;
+      background-image: url(/assets/imgs/bg/school2.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      overflow: hidden;
+      padding-bottom: 40px;
+      padding-top: 180px;
+      display: flex;
+      align-items: center;
+
+      @media #{$sm} {
+        height: 100vh;
+      }
+    }
+
+    &-school {
+      min-height: 100vh;
+      background-image: url(/assets/imgs/bg/school.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      // overflow: hidden;
+      // padding-bottom: 40px;
+      // padding-top: 180px;
+
+      @media #{$sm} {
+        // height: fit-content;
+        padding-top: 80px;
+        padding-bottom: 80px;
+      }
+    }
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      color: var(--white);
+      margin-bottom: 20px;
+
+      h4 {
+        font-size: 20px;
+        width: 100px;
+      }
+
+      p {
+        font-size: 18px;
+        // width: 150px;
+      }
+    }
+
+    &-text-wrapper {
+      display: flex;
+      margin-top: 14px;
+
+      h4 {
+        font-size: 20px;
+        width: 100px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
+
+    &-bottom {
+      margin-left: 40px;
+      margin-top: 40px;
+      margin-right: 20px;
+
+      h5 {
+        font-size: 20px;
+        margin-bottom: 8px;
+      }
+
+      @media #{$md} {
+        margin-left: 0;
+      }
+
+      @media #{$sm} {
+        margin-left: 0;
+      }
+    }
+
+    &-list {
+      margin-top: 40px;
+      margin-right: 20px;
+
+      h5 {
+        font-size: 20px;
+        margin-bottom: 8px;
+      }
+
+      @media #{$sm} {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__line {
+    height: 1px;
+    width: 110px;
+    background-color: var(--white);
+    margin-bottom: 8px;
+    margin-right: 24px;
+  }
+
+  &__subtitle {
+    font-size: 40px;
+    margin-top: 60px;
+    color: var(--gray-3);
+  }
+
+  &__btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--white);
+    background-color: var(--black-2);
+    border-radius: 4px;
+    padding: 10px 15px;
+    background: #2b2b2f;
+    width: 100%;
+  }
+
+  &__btn2 {
+    button {
+      display: inline-block;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--gray-2);
+      background: #2b2b2f;
+      border-radius: 4px;
+      padding: 10px 15px;
+      text-transform: capitalize;
+
+      &:hover,
+      &.active {
+        color: var(--white);
+      }
+    }
+
+    select {
+      height: 55px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--black-2);
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid var(--gray);
+      padding: 15px 0px;
+      cursor: pointer;
+      transition: all 0.3s;
+      outline: 0;
+      margin-bottom: 35px;
+
+      @media #{$lg} {
+        padding: 10px 0;
+        margin-bottom: 25px;
+      }
+
+      @media #{$md} {
+        padding: 10px 0;
+        margin-bottom: 25px;
+      }
+
+      @media #{$sm} {
+        margin-bottom: 20px;
+      }
+
+      &:focus {
+        border-bottom: 1px solid var(--black-2);
+      }
+
+      &::placeholder {
+        color: var(--black-2);
+        opacity: 1;
+      }
+    }
+
+    textarea {
+      height: 55px;
+    }
+
+    #btn_wrapper,
+    .btn_wrapper {
+      margin-top: -20px;
+
+      @media #{$xl} {
+        margin-top: -10px;
+      }
+
+      @media (max-width: 1200px) {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &__left {
+    padding-top: 80px;
+    width: 90%;
+
+    @media #{$sm} {
+      padding-top: 60px;
+    }
+
+    @media #{$md} {
+      padding-top: 80px;
+    }
+
+    @media #{$md} {
+      padding-top: 100px;
+    }
+  }
+
+  &__right {
+    background-color: #1e2024;
+    padding: 143px 60px 0px 110px;
+    position: relative;
+
+    @media #{$sm} {
+      padding: 40px 20px 20px 20px;
+      margin-top: 20px;
+    }
+
+    @media #{$md} {
+      padding: 80px 20px;
+    }
+
+    @media #{$lg} {
+      padding: 100px 20px 0px 25px;
+    }
+
+    p {
+      font-size: 18px;
+      color: var(--gray-18);
+      line-height: 1.5;
+      padding-right: 24px;
+
+      @media #{$sm} {
+        padding-right: 0;
+        font-size: 16px;
+      }
+
+      @media #{$md} {
+        padding-right: 0;
+        font-size: 16px;
+      }
+
+      @media #{$lg} {
+        padding-right: 24px;
+      }
+
+      @media #{$xl} {
+        padding-right: 24px;
+      }
+
+      @media #{$xxl} {
+        padding-right: 24px;
+      }
+
+      span {
+        color: var(--white);
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+fieldset.MuiOutlinedInput-notchedOutline {
+  /* border-color: rgb(244, 25, 25); */
+  border: 0;
+  border-bottom: 1px solid #d9dbeb;
+  padding: 0px;
+  height: 49px;
+  border-radius: 0;
+}
+
+.Mui-focused fieldset.MuiOutlinedInput-notchedOutline {
+  border-color: black !important;
+}
+#cb1 {
+  accent-color: #34495e;
+}
+#Hero1 {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -1,0 +1,31 @@
+
+.jodit_theme_dark .jodit-container,
+.jodit_theme_dark .jodit-workplace,
+.jodit_theme_dark .jodit-wysiwyg {
+  background-color: hsl(222.86deg 84% 4.9%) !important;
+  border: 0.2px solid rgba(149, 149, 150,0.2) !important; 
+}
+
+.jodit_theme_dark .jodit-toolbar,
+.jodit_theme_dark .jodit-status-bar,
+.jodit_theme_dark .jodit-toolbar__box {
+  background-color: hsl(222.86deg 84% 4.9%) !important;
+  border: 0.5px solid rgba(70, 70, 70,0.2) !important;
+  border-color: rgba(222, 225, 230,0.2) !important; 
+}
+
+.jodit_theme_dark a {
+  color: #4a90e2;
+  background-color: transparent;
+}
+
+.jodit_theme_dark .jodit-toolbar-button {
+  background-color: hsl(222.2 84% 4.9%);
+  color: #f0f0f0;
+  border: 0.5px solid rgb(45, 48, 53);
+}
+
+.jodit_theme_dark .jodit-toolbar-button:hover {
+  background-color: #e7eaee;
+  color: black;
+}

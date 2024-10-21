@@ -1,0 +1,12 @@
+fieldset.MuiOutlinedInput-notchedOutline {
+  border-color: gray;
+  border: 0;
+  border-bottom: 2px solid;
+  padding: 0px;
+  height: 55px;
+  border-radius: 0;
+}
+
+.Mui-focused fieldset.MuiOutlinedInput-notchedOutline {
+  border-color: gray !important;
+}

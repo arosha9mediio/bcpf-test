@@ -1,0 +1,1098 @@
+"""
+Indicates exactly one field must be supplied and this field must not be `null`.
+"""
+directive @oneOf on INPUT_OBJECT
+
+type AdjacentResponse {
+  next: Post
+  previous: Post
+}
+
+type CarouselImage {
+  images: EmbedFileType
+  link: String
+  subTitle: String
+  title: String
+}
+
+input ChangeUserPwDto {
+  currentPassword: String!
+  id: ID!
+  newPassword: String!
+}
+
+type Contest {
+  Application: [ContestApply!]
+  applyNumberPrefix: String!
+  applyYn: Int!
+  content: String
+  contestType: String!
+  createdAt: Date
+  endDate: Date
+  file: [EmbedFileType!]
+  guideUrl: String
+  highlight: String
+  id: ID!
+  snippet: String!
+  sort: Int
+  startDate: Date
+  statusId: Int!
+  title: String!
+  updatedAt: Date
+  userId: ID
+  viewMain: String
+  views: Int!
+}
+
+type ContestApply {
+  Contest: Contest
+  applier1Address: String!
+  applier1Age: String
+  applier1Birth: Date
+  applier1Carrier: String
+  applier1Company: String
+  applier1Email: String!
+  applier1Etc: String
+  applier1Gender: String
+  applier1Mobile: String!
+  applier1Name: String!
+  applier1Role: String
+  applier1Scholar: String
+  applier1School: String
+  applier1SchoolEtc: String
+  applier1Zip: String
+  applier2Address: String
+  applier2Birth: Date
+  applier2Carrier: String
+  applier2Company: String
+  applier2Email: String
+  applier2Etc: String
+  applier2Gender: String
+  applier2Mobile: String
+  applier2Name: String
+  applier2Role: String
+  applier2Zip: String
+  applierType: String!
+  applyBCPFYn: String
+  applyNumber: String!
+  applyOtherOrgYn: String
+  channelLink: String
+  companyAddress: String
+  companyAsk: String
+  companyAttDate: String
+  companyAttWhy: String
+  companyCeo: String
+  companyCeoMobile: String
+  companyIntroduce: String
+  companyName: String
+  companyNameEng: String
+  companyParticipants: String
+  companyParticipantsAge: String
+  companyPhone: String
+  companyPin: String
+  companyZip: String
+  contestId: Int!
+  contestType: String!
+  contestTypeSub: String
+  createdAt: Date!
+  experienceMediaEduYn: Int
+  file: [EmbedApplyFileType!]
+  howToCome: String
+  id: ID!
+  passChasu: String!
+  passStatus: String!
+  programChannel: String
+  programCount: String
+  programGenre: String
+  programHasContractWithCompany: Int
+  programRegion: String
+  programRuntime: String
+  programRuntimeTotal: String
+  programTitle: String
+  trailerUrl: String
+  updatedAt: Date
+  userId: Int!
+}
+
+input CreateApplicantDTO {
+  applier1Address: String!
+  applier1Age: String
+  applier1Birth: Date
+  applier1Carrier: String
+  applier1Company: String
+  applier1Email: String!
+  applier1Etc: String
+  applier1Gender: String
+  applier1Mobile: String!
+  applier1Name: String!
+  applier1Role: String
+  applier1Scholar: String
+  applier1School: String
+  applier1SchoolEtc: String
+  applier1Zip: String
+  applier2Address: String
+  applier2Birth: Date
+  applier2Carrier: String
+  applier2Company: String
+  applier2Email: String
+  applier2Etc: String
+  applier2Gender: String
+  applier2Mobile: String
+  applier2Name: String
+  applier2Role: String
+  applier2Zip: String
+  applierType: String!
+  applyBCPFYn: String
+  applyNumber: String!
+  applyOtherOrgYn: String
+  channelLink: String
+  companyAddress: String
+  companyAsk: String
+  companyAttDate: String
+  companyAttWhy: String
+  companyCeo: String
+  companyCeoMobile: String
+  companyIntroduce: String
+  companyName: String
+  companyNameEng: String
+  companyParticipants: String
+  companyParticipantsAge: String
+  companyPhone: String
+  companyPin: String
+  companyZip: String
+  contestId: Int!
+  contestType: String!
+  contestTypeSub: String
+  experienceMediaEduYn: Int
+  file: [EmbedApplicantFileTypeInput!]
+  howToCome: String
+  passChasu: String!
+  passStatus: String!
+  prefix: String!
+  programChannel: String
+  programCount: String
+  programGenre: String
+  programHasContractWithCompany: Int
+  programRegion: String
+  programRuntime: String
+  programRuntimeTotal: String
+  programTitle: String
+  trailerUrl: String
+  userId: Int!
+}
+
+input CreateContestDTO {
+  applyNumberPrefix: String!
+  applyYn: Int!
+  content: String
+  contestType: String!
+  endDate: Date
+  file: [EmbedFileTypeInput!]
+  guideUrl: String
+  highlight: String
+  snippet: String!
+  sort: Int
+  startDate: Date
+  statusId: Int!
+  title: String!
+  userId: ID
+  viewMain: String
+  views: Int!
+}
+
+input CreateDonationDTO {
+  month: String!
+  names: String!
+  price: String!
+  sort: Int
+  statusId: Int!
+  type: Float!
+  year: String!
+}
+
+input CreatePostCategoryDto {
+  """제목"""
+  title: String!
+}
+
+input CreatePostDTO {
+  """내용"""
+  body: String
+
+  """카테고리"""
+  categoryId: ID!
+
+  """등록날짜"""
+  createdAt: Date
+
+  """description"""
+  description: String
+  file: [EmbedFileTypeInput!]
+
+  """keywords for page"""
+  keywords: String
+  language: String
+
+  """meta description for page"""
+  metaDescription: String
+
+  """상태"""
+  noticeType: Int
+
+  """상단고정"""
+  pin: Int
+
+  """미리보기"""
+  preview: String
+  publishStatus: Boolean
+
+  """게시시작일"""
+  publishedAt: Date
+
+  """slug"""
+  slug: String
+
+  """sub title"""
+  subTitle: String
+  tags: String
+
+  """제목"""
+  title: String!
+
+  """주제글번호"""
+  topicId: ID
+
+  """글종류"""
+  type: Int
+
+  """게시종료일"""
+  unpublishedAt: Date
+}
+
+input CreateUserDto {
+  birthday: Date
+  email: String
+  gender: Int
+  name: String!
+  phone: String
+  role: String
+  status: Int
+}
+
+"""Date custom scalar type"""
+scalar Date
+
+type Donation {
+  createdAt: Date
+  id: ID!
+  month: String!
+  names: String!
+  price: String!
+  sort: Int
+  statusId: Int!
+  type: Float!
+  updatedAt: Date
+  year: String!
+}
+
+input EmbedApplicantFileTypeInput {
+  """file name"""
+  filename: String!
+  key: String
+
+  """file type"""
+  type: FileType!
+
+  """file URL"""
+  url: String!
+}
+
+type EmbedApplyFileType {
+  """file name"""
+  filename: String!
+  key: String
+
+  """file type"""
+  type: FileType!
+
+  """file URL"""
+  url: String!
+}
+
+type EmbedFileType {
+  """file name"""
+  filename: String!
+
+  """file type"""
+  type: FileType!
+
+  """file URL"""
+  url: String!
+}
+
+input EmbedFileTypeInput {
+  """file name"""
+  filename: String!
+
+  """file type"""
+  type: FileType!
+
+  """file URL"""
+  url: String!
+}
+
+type Features {
+  breadcrumbs: [String!]
+  description: String
+
+  """file name"""
+  filename: String!
+  link: String
+  linkTitle: String
+  rank: String
+  subTitle: String
+  title: String
+
+  """file type"""
+  type: FileType!
+
+  """file URL"""
+  url: String!
+}
+
+enum FileType {
+  DOC
+  IMAGE
+  THUMBNAIL
+  VIDEO
+}
+
+type Like {
+  User: User!
+  createdAt: Date
+  createdBy: ID!
+  id: ID!
+  refId: Int
+  refType: String!
+}
+
+type Mutation {
+  changeUserPw(
+    """change user password"""
+    changeUserPwDto: ChangeUserPwDto!
+  ): String!
+  createApplication(input: CreateApplicantDTO!): ContestApply!
+  createContest(input: CreateContestDTO!): Contest!
+  createDonation(input: CreateDonationDTO!): Donation!
+  createPost(input: CreatePostDTO!): Post!
+  createPostCategory(
+    """new PostCategory"""
+    input: CreatePostCategoryDto!
+  ): PostCategory!
+  createPresignedPost(isProtected: Boolean = true, path: String, type: String!): String!
+  createUser(input: CreateUserDto!): User!
+  deleteApplication(
+    """application id"""
+    id: ID!
+  ): Boolean!
+  deleteContest(id: ID!): Boolean!
+  deleteDonation(id: ID!): Boolean!
+  deletePost(
+    """post id"""
+    id: ID!
+  ): Boolean!
+  deletePostCategory(
+    """postCategory id"""
+    id: ID!
+  ): Boolean!
+  deleteUser(
+    """the user id to get a user"""
+    id: ID!
+  ): Boolean!
+  resetPwWithEncKey(resetUserPwDto: ResetUserPwDto!): Boolean!
+  sendContactEmail(
+    """Send Contact Us Email Data"""
+    sendContactEmailDto: SendContactEmailDto!
+  ): Boolean!
+  sendPhoneVerifyToken(sendPhoneVerifyTokenDto: SendPhoneVerifyTokenDto!): Boolean!
+  sendPwTokenEmail(sendPwTokenEmailDto: SendPwTokenEmailDto!): Boolean!
+  signIn(signInDto: SignInDto!): [String!]!
+  updateApplication(input: UpdateApplicationDTO!): ContestApply!
+  updateContest(input: UpdateContestDTO!): Contest!
+  updateDonation(input: UpdateDonationDTO!): Donation!
+  updatePost(
+    """update Post"""
+    input: UpdatePostDTO!
+  ): Post!
+  updatePostCategory(
+    """update PostCategory"""
+    input: UpdatePostCategoryDTO!
+  ): PostCategory!
+  updatePushToken(pushToken: String!): Boolean!
+  updateUser(
+    """target user information"""
+    updateUserDto: UpdateUserDto!
+  ): User!
+  updateUserByAdmin(
+    """update user profile"""
+    updateUserProfileDto: UpdateUserProfileDto!
+  ): Boolean!
+  updateUserPhone(updateUserPhoneDto: UpdateUserPhoneDto!): Boolean!
+  updateUserProfile(
+    """update user profile"""
+    updateUserProfileDto: UpdateUserProfileDto!
+  ): Boolean!
+  updateUserStatus(
+    """target user info"""
+    updateUserStatusDto: UpdateUserStatusDto!
+  ): User!
+  validateRefreshJwt(token: String!): String!
+}
+
+type Navigation {
+  main: String!
+  sub: [SubNavigation!]
+}
+
+type PaginatedBroadcastResponse {
+  categoryId: Int
+  client: Boolean
+  contestId: Int
+  filter: String
+  from: Date
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  id: ID
+  itemCount: Int!
+  list: [WorkSupport!]!
+  page: Int
+  pageCount: Int!
+  pageSize: Int
+  query: String
+  searchBy: String
+  sortBy: String
+  sortType: String
+  status: Int
+  to: Date
+  type: String
+  viewMain: String
+  year: String
+}
+
+type PaginatedContestApplyResponse {
+  categoryId: Int
+  client: Boolean
+  contestId: Int
+  filter: String
+  from: Date
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  id: ID
+  itemCount: Int!
+  list: [ContestApply!]!
+  page: Int
+  pageCount: Int!
+  pageSize: Int
+  query: String
+  searchBy: String
+  sortBy: String
+  sortType: String
+  status: Int
+  to: Date
+  type: String
+  viewMain: String
+  year: String
+}
+
+type PaginatedContestResponse {
+  categoryId: Int
+  client: Boolean
+  contestId: Int
+  filter: String
+  from: Date
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  id: ID
+  itemCount: Int!
+  list: [Contest!]!
+  page: Int
+  pageCount: Int!
+  pageSize: Int
+  query: String
+  searchBy: String
+  sortBy: String
+  sortType: String
+  status: Int
+  to: Date
+  type: String
+  viewMain: String
+  year: String
+}
+
+type PaginatedDonationResponse {
+  categoryId: Int
+  client: Boolean
+  contestId: Int
+  filter: String
+  from: Date
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  id: ID
+  itemCount: Int!
+  list: [Donation!]!
+  page: Int
+  pageCount: Int!
+  pageSize: Int
+  query: String
+  searchBy: String
+  sortBy: String
+  sortType: String
+  status: Int
+  to: Date
+  type: String
+  viewMain: String
+  year: String
+}
+
+type PaginatedPostCategoryResponse {
+  categoryId: Int
+  client: Boolean
+  contestId: Int
+  filter: String
+  from: Date
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  id: ID
+  itemCount: Int!
+  list: [PostCategory!]!
+  page: Int
+  pageCount: Int!
+  pageSize: Int
+  query: String
+  searchBy: String
+  sortBy: String
+  sortType: String
+  status: Int
+  to: Date
+  type: String
+  viewMain: String
+  year: String
+}
+
+type PaginatedPostResponse {
+  categoryId: Int
+  client: Boolean
+  contestId: Int
+  filter: String
+  from: Date
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  id: ID
+  itemCount: Int!
+  list: [Post!]!
+  page: Int
+  pageCount: Int!
+  pageSize: Int
+  query: String
+  searchBy: String
+  sortBy: String
+  sortType: String
+  status: Int
+  to: Date
+  type: String
+  viewMain: String
+  year: String
+}
+
+input PaginatedRequest {
+  categoryId: Int
+  client: Boolean
+  contestId: Int
+  filter: String
+  from: Date
+  id: ID
+  page: Int = 1
+  pageSize: Int = 12
+  query: String = ""
+  searchBy: String = ""
+  sortBy: String = ""
+  sortType: String = "ASC"
+  status: Int = null
+  to: Date
+  type: String = null
+  viewMain: String = ""
+  year: String = null
+}
+
+type PaginatedUserResponse {
+  categoryId: Int
+  client: Boolean
+  contestId: Int
+  filter: String
+  from: Date
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  id: ID
+  itemCount: Int!
+  list: [User!]!
+  page: Int
+  pageCount: Int!
+  pageSize: Int
+  query: String
+  searchBy: String
+  sortBy: String
+  sortType: String
+  status: Int
+  to: Date
+  type: String
+  viewMain: String
+  year: String
+}
+
+type Post {
+  Category: PostCategory!
+  User: User!
+
+  """내용"""
+  body: String
+
+  """카테고리"""
+  categoryId: ID!
+
+  """답글갯수"""
+  commentCount: Int
+
+  """등록날짜"""
+  createdAt: Date
+
+  """작성자"""
+  createdBy: ID!
+
+  """description"""
+  description: String
+  file: [EmbedFileType!]
+
+  """번호"""
+  id: ID!
+
+  """keywords for page"""
+  keywords: String
+  language: String
+
+  """좋아요"""
+  likeCount: Int
+
+  """meta description for page"""
+  metaDescription: String
+
+  """상태"""
+  noticeType: Int
+
+  """상단고정"""
+  pin: Int
+
+  """미리보기"""
+  preview: String
+  publishStatus: Boolean
+
+  """게시시작일"""
+  publishedAt: Date
+
+  """별점"""
+  rating: ID
+
+  """참조번호"""
+  refId: ID
+
+  """신고횟수"""
+  reportCount: Int
+
+  """slug"""
+  slug: String
+
+  """정렬"""
+  sort: Int
+
+  """sub title"""
+  subTitle: String
+  tags: String
+
+  """제목"""
+  title: String!
+
+  """주제글번호"""
+  topicId: ID
+
+  """글종류"""
+  type: Int
+
+  """게시종료일"""
+  unpublishedAt: Date
+
+  """조회수"""
+  views: Int
+}
+
+type PostCategory {
+  Posts: [Post!]!
+
+  """번호"""
+  id: ID!
+
+  """제목"""
+  title: String!
+}
+
+type Query {
+  applicationFeed(pageRequest: PaginatedRequest): PaginatedContestApplyResponse!
+  broadcastFeed(paginatedRequest: PaginatedRequest): PaginatedBroadcastResponse!
+  contestsFeed(pageRequest: PaginatedRequest): PaginatedContestResponse!
+  donationFeed(pageRequest: PaginatedRequest): PaginatedDonationResponse!
+  findApplication(id: ID!): ContestApply!
+  findBroadcast(id: ID!): WorkSupport!
+  findContest(id: ID!): Contest!
+  findDonation(id: ID!): Donation!
+  findPost(
+    """post id or slug"""
+    id: String!
+  ): Post!
+  findPostCategory(
+    """postCategory id"""
+    id: ID!
+  ): PostCategory!
+  findUser(
+    """the user id to get a user."""
+    id: ID!
+  ): User!
+  getAdjacentPosts(
+    """post id or slug"""
+    id: String!
+    pageRequest: PaginatedRequest
+  ): AdjacentResponse!
+  getApplicationByContest(contestId: ID!): ContestApply
+  getMainContest(pageRequest: PaginatedRequest): [Contest!]!
+  getMe: User!
+  isSlugExist(
+    """post slug"""
+    slug: String!
+  ): Boolean!
+  postCategoryFeed(pageRequest: PaginatedRequest): PaginatedPostCategoryResponse!
+  postFeed(pageRequest: PaginatedRequest): PaginatedPostResponse!
+  userFeed(pageRequest: PaginatedRequest): PaginatedUserResponse!
+}
+
+input ResetUserPwDto {
+  encKey: String!
+  plainPassword: String!
+}
+
+input SendContactEmailDto {
+  email: String
+  message: String!
+  name: String!
+  subject: String!
+}
+
+input SendPhoneVerifyTokenDto {
+  phone: String!
+}
+
+input SendPwTokenEmailDto {
+  email: String!
+}
+
+input SignInDto {
+  """애플용Nonce"""
+  appleNonce: String
+
+  """애플용유저정보"""
+  appleUser: String
+
+  """소셜코드"""
+  code: String
+
+  """디바이스아이디"""
+  deviceId: String
+
+  """이메일"""
+  email: String
+
+  """입력비밀번호"""
+  plainPassword: String
+
+  """로그인타입"""
+  type: String!
+}
+
+type SubNavigation {
+  href: String
+  name: String!
+}
+
+input UpdateApplicationDTO {
+  applier1Address: String
+  applier1Age: String
+  applier1Birth: Date
+  applier1Carrier: String
+  applier1Company: String
+  applier1Email: String
+  applier1Etc: String
+  applier1Gender: String
+  applier1Mobile: String
+  applier1Name: String
+  applier1Role: String
+  applier1Scholar: String
+  applier1School: String
+  applier1SchoolEtc: String
+  applier1Zip: String
+  applier2Address: String
+  applier2Birth: Date
+  applier2Carrier: String
+  applier2Company: String
+  applier2Email: String
+  applier2Etc: String
+  applier2Gender: String
+  applier2Mobile: String
+  applier2Name: String
+  applier2Role: String
+  applier2Zip: String
+  applierType: String
+  applyBCPFYn: String
+  applyNumber: String
+  applyOtherOrgYn: String
+  channelLink: String
+  companyAddress: String
+  companyAsk: String
+  companyAttDate: String
+  companyAttWhy: String
+  companyCeo: String
+  companyCeoMobile: String
+  companyIntroduce: String
+  companyName: String
+  companyNameEng: String
+  companyParticipants: String
+  companyParticipantsAge: String
+  companyPhone: String
+  companyPin: String
+  companyZip: String
+  contestId: Int
+  contestType: String
+  contestTypeSub: String
+  experienceMediaEduYn: Int
+  file: [EmbedApplicantFileTypeInput!]
+  howToCome: String
+  id: ID!
+  passChasu: String
+  passStatus: String
+  programChannel: String
+  programCount: String
+  programGenre: String
+  programHasContractWithCompany: Int
+  programRegion: String
+  programRuntime: String
+  programRuntimeTotal: String
+  programTitle: String
+  trailerUrl: String
+  userId: Int
+}
+
+input UpdateContestDTO {
+  applyNumberPrefix: String
+  applyYn: Int
+  content: String
+  contestType: String
+  endDate: Date
+  file: [EmbedFileTypeInput!]
+  guideUrl: String
+  highlight: String
+  id: ID!
+  snippet: String
+  sort: Int
+  startDate: Date
+  statusId: Int
+  title: String
+  userId: ID
+  viewMain: String
+  views: Int
+}
+
+input UpdateDonationDTO {
+  id: ID!
+  month: String
+  names: String
+  price: String
+  sort: Int
+  statusId: Int
+  type: Float
+  year: String
+}
+
+input UpdatePostCategoryDTO {
+  id: ID!
+
+  """제목"""
+  title: String
+}
+
+input UpdatePostDTO {
+  """내용"""
+  body: String
+
+  """카테고리"""
+  categoryId: ID
+
+  """등록날짜"""
+  createdAt: Date
+
+  """description"""
+  description: String
+  file: [EmbedFileTypeInput!]
+  id: ID!
+
+  """keywords for page"""
+  keywords: String
+  language: String
+
+  """meta description for page"""
+  metaDescription: String
+
+  """상태"""
+  noticeType: Int
+
+  """상단고정"""
+  pin: Int
+
+  """미리보기"""
+  preview: String
+  publishStatus: Boolean
+
+  """게시시작일"""
+  publishedAt: Date
+
+  """slug"""
+  slug: String
+
+  """sub title"""
+  subTitle: String
+  tags: String
+
+  """제목"""
+  title: String
+
+  """주제글번호"""
+  topicId: ID
+
+  """글종류"""
+  type: Int
+
+  """게시종료일"""
+  unpublishedAt: Date
+}
+
+input UpdateUserDto {
+  accessToken: String
+  email: String
+  id: ID
+  name: String
+  phone: String
+  role: String
+  status: Int
+}
+
+input UpdateUserPhoneDto {
+  encKey: String!
+  phone: String!
+}
+
+input UpdateUserProfileDto {
+  address: String
+  avatarPath: String
+  birthday: Date
+  gender: Int
+  language: String
+  name: String
+  nationality: String
+  other: String
+  phone: String
+  role: String
+  status: Float
+  userId: ID!
+}
+
+input UpdateUserStatusDto {
+  id: ID!
+  status: Int
+}
+
+type User {
+  Likes: [Like!]
+  Posts: [Post!]
+  UserProfile: UserProfile
+  UserTokens: [UserToken!]!
+  createdAt: Date
+  email: String
+  id: ID!
+  interpretedRole: String
+  pushToken: String
+  role: String
+  status: Int
+  updatedAt: Date
+}
+
+type UserProfile {
+  address: String
+  avatarPath: String
+  birthday: Date
+  country: String
+  description: String
+  gender: Int
+  language: String
+  name: String
+  nationality: String
+  other: String
+  phone: String
+  timezone: String
+  userId: ID!
+}
+
+type UserToken {
+  User: User!
+  createdAt: String!
+  expiredAt: String!
+  id: ID!
+  token: String!
+  type: String!
+  updatedAt: String
+  userId: ID!
+}
+
+type WorkSupport {
+  awards: String!
+  broadcast: String!
+  configuration: String
+  createdAt: Date!
+  edit: String!
+  genre: String!
+  id: ID!
+  img1: String!
+  img2: String!
+  img3: String!
+  img4: String!
+  img5: String!
+  plan: String!
+  previewUrl: String!
+  producer: String
+  producers: String!
+  production: String
+  productionSupportDate: Date
+  publishers: String
+  shooting: String!
+  statusId: Int!
+  summaryInfo: String!
+  synopsis: String
+  theatersDate: Date
+  title: String!
+  type: Int!
+  updatedAt: Date
+  vimeoUrl: String
+}

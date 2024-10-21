@@ -1,0 +1,74 @@
+fragment ContestCommonParts on Contest {
+  id
+  snippet
+  content
+  file {
+    url
+    filename
+    type
+  }
+  views
+  applyYn
+  statusId
+  startDate
+  endDate
+  userId
+  contestType
+  createdAt
+  updatedAt
+  title
+  applyNumberPrefix
+  viewMain
+  guideUrl
+  highlight
+  sort
+  Application {
+    id
+    programTitle
+    applier1Name
+    applier1Email
+    createdAt
+  }
+}
+
+mutation createContest($input: CreateContestDTO!) {
+  createContest(input: $input) {
+    id
+  }
+}
+
+query findContest($id: ID!) {
+  findContest(id: $id) {
+    ...ContestCommonParts
+  }
+}
+
+query ContestsFeed($pageRequest: PaginatedRequest) {
+  contestsFeed(pageRequest: $pageRequest) {
+    list {
+      ...ContestCommonParts
+    }
+    page
+    pageSize
+    pageCount
+    itemCount
+    hasNextPage
+    hasPreviousPage
+  }
+}
+
+mutation updateContest($input: UpdateContestDTO!) {
+  updateContest(input: $input) {
+    id
+  }
+}
+
+mutation deleteContest($id: ID!) {
+  deleteContest(id: $id)
+}
+
+query getMainContest($pageRequest: PaginatedRequest) {
+  getMainContest(pageRequest: $pageRequest) {
+    ...ContestCommonParts
+  }
+}

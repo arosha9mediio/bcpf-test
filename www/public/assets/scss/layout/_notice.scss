@@ -1,0 +1,138 @@
+/*----------------------------------------*/
+/*  NOTICE
+/*----------------------------------------*/
+
+.notice {
+  &__area {
+    background-color: var(--white);
+
+    &-notice {
+      background-image: url(/assets/imgs/bg/notice.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      overflow: hidden;
+      padding-bottom: 40px;
+      padding-top: 180px;
+    }
+  }
+
+  &__title {
+    font-size: 80px;
+    line-height: 1;
+    color: var(--white);
+
+    @media #{$sm} {
+      font-size: 48px;
+      line-height: 1.2;
+    }
+  }
+
+  &__subtitle {
+    font-size: 40px;
+    margin-top: 24px;
+    color: var(--white-2);
+
+    @media #{$sm} {
+      margin-top: 24px;
+      font-size: 24px;
+    }
+  }
+
+  &__subtitle-2 {
+    font-size: 28px;
+    margin-top: 40px;
+    color: var(--gray-2);
+
+    @media #{$sm} {
+      font-size: 20px;
+      margin-top: 24px;
+    }
+  }
+
+  &__btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--white);
+    background-color: var(--black-2);
+    border-radius: 4px;
+    padding: 10px 15px;
+    background: #2b2b2f;
+    width: 100%;
+  }
+
+  &__btn2 {
+    button {
+      display: inline-block;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--gray-2);
+      background: #2b2b2f;
+      border-radius: 4px;
+      padding: 10px 15px;
+      text-transform: capitalize;
+
+      &:hover,
+      &.active {
+        color: var(--white);
+      }
+    }
+
+    select {
+      height: 55px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+      color: var(--black-2);
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid var(--gray);
+      padding: 15px 0px;
+      cursor: pointer;
+      transition: all 0.3s;
+      outline: 0;
+      margin-bottom: 35px;
+
+      @media #{$lg} {
+        padding: 10px 0;
+        margin-bottom: 25px;
+      }
+
+      @media #{$md} {
+        padding: 10px 0;
+        margin-bottom: 25px;
+      }
+
+      @media #{$sm} {
+        margin-bottom: 20px;
+      }
+
+      &:focus {
+        border-bottom: 1px solid var(--black-2);
+      }
+
+      &::placeholder {
+        color: var(--black-2);
+        opacity: 1;
+      }
+    }
+
+    textarea {
+      height: 55px;
+    }
+
+    #btn_wrapper,
+    .btn_wrapper {
+      margin-top: -20px;
+
+      @media #{$xl} {
+        margin-top: -10px;
+      }
+
+      @media (max-width: 1200px) {
+        margin-top: 10px;
+      }
+    }
+  }
+}

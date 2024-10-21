@@ -1,0 +1,99 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+**/node_modules
+**/.yarn
+**/.github
+**/.contentlayer
+
+# testing
+**/coverage
+
+# production
+**/build
+**/dist
+
+# misc
+**/.DS_Store
+**/.eslintcache
+
+# dotenv environment variable files
+**/.env*
+
+# IDE configuration
+**/.idea
+**/.vscode
+
+/src/styles/tailwind.css
+ 
+**/.pnp*
+
+ 
+# Logs
+**/*.log*
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+ 
+pnpm-lock.yaml
+ 
+
+# nyc test coverage
+.nyc_output
+
+# Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+
+# Bower dependency directory (https://bower.io/)
+bower_components
+
+# node-waf configuration
+.lock-wscript
+
+   
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+  
+
+# Output of 'npm pack'
+**/*.tgz
+**/*.zip
+
+# Next.js build output
+**/.next
+**/out
+
+ 
+ 
+  
+
+# Serverless directories
+**/.serverless/
+ 
+
+# DynamoDB Local files
+**/.dynamodb/
+
+# NestJS
+**/.application.yml
+
+ 
+# no track 
+**/ungit*
+
+# # graphql codegen
+# **/__generated

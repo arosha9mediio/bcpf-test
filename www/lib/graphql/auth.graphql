@@ -1,0 +1,79 @@
+mutation signIn($input: SignInDto!) {
+  signIn(signInDto: $input)
+}
+
+mutation validateRefreshJwt($token: String!) {
+  validateRefreshJwt(token: $token)
+}
+
+mutation updateUser($updateUserDto: UpdateUserDto!) {
+  updateUser(updateUserDto: $updateUserDto) {
+    id
+  }
+}
+
+mutation updateUserProfile($updateUserProfileDto: UpdateUserProfileDto!) {
+  updateUserProfile(updateUserProfileDto: $updateUserProfileDto)
+}
+mutation sendPhoneVerifyToken(
+  $sendPhoneVerifyTokenDto: SendPhoneVerifyTokenDto!
+) {
+  sendPhoneVerifyToken(sendPhoneVerifyTokenDto: $sendPhoneVerifyTokenDto)
+}
+
+mutation updateUserPhone($updateUserPhoneDto: UpdateUserPhoneDto!) {
+  updateUserPhone(updateUserPhoneDto: $updateUserPhoneDto)
+}
+
+fragment UserCommonParts on User {
+  id
+  pushToken
+  email
+  status
+  role
+  UserProfile {
+    birthday
+    gender
+    phone
+    name
+    address
+  }
+  createdAt
+  updatedAt
+}
+
+query getMe {
+  getMe {
+    ...UserCommonParts
+  }
+}
+
+query userFeed($pageRequest: PaginatedRequest) {
+  userFeed(pageRequest: $pageRequest) {
+    list {
+      ...UserCommonParts
+    }
+    page
+    pageSize
+    pageCount
+    itemCount
+    hasNextPage
+    hasPreviousPage
+  }
+}
+
+query findUser($id: ID!) {
+  findUser(id: $id) {
+    ...UserCommonParts
+  }
+}
+
+mutation createUser($input: CreateUserDto!) {
+  createUser(input: $input) {
+    ...UserCommonParts
+  }
+}
+
+mutation deleteUser($id: ID!) {
+  deleteUser(id: $id)
+}

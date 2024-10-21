@@ -1,0 +1,142 @@
+{
+  "nav": [
+    {
+      "nav_name": "홈",
+      "link": "/ko/home",
+      "type": "",
+      "sub_nav": []
+    },
+    {
+      "nav_name": "주요사업",
+      "link": "/content/promotion/drama-contest",
+      "type": "dropdown",
+      "sub_nav": [
+        {
+          "name": "진흥사업",
+          "link": "/content/promotion/drama-contest",
+          "sub_dropdown_nav": [
+            {
+              "name": "드라마극본공모전",
+              "link": "/content/promotion/drama-contest"
+            },
+            {
+              "name": "청년다큐멘터리감독지원사업",
+              "link": "/content/promotion/youth-documentary"
+            },
+            {
+              "name": "다큐멘터리 제작지원",
+              "link": "/content/promotion/global-documentary"
+            },
+            {
+              "name": "크리에이터 양성",
+              "link": "/content/promotion/creator-training"
+            },
+            {
+              "name": "BCPF 대한민국 1인방송대상",
+              "link": "/content/promotion/single-award"
+            },
+            {
+              "name": "공익 영상공모전",
+              "link": "/content/promotion/public-interest"
+            },
+            {
+              "name": "지역살리기프로젝트",
+              "link": "/content/promotion/community-project"
+            }
+          ]
+        },
+        {
+          "name": "조사연구사업",
+          "link": "/content/research/broadcast-conference",
+          "sub_dropdown_nav": [
+            {
+              "name": "방송콘텐츠 컨퍼런스 및 포럼",
+              "link": "/content/research/broadcast-conference"
+            },
+            {
+              "name": "계간지·연구보고서 발간",
+              "link": "/content/research/publication"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "nav_name": "BCPF콘텐츠학교",
+      "link": "/school/introduction",
+      "type": "dropdown",
+      "sub_nav": [
+        {
+          "name": "학교소개",
+          "link": "/school/introduction",
+          "data": []
+        },
+        {
+          "name": "학교시설",
+          "link": "/school/facility",
+          "data": []
+        },
+        {
+          "name": "주요 프로그램",
+          "link": "/school/major-program",
+          "data": []
+        }
+      ]
+    },
+    {
+      "nav_name": "재단소개",
+      "link": "/about/introduction/introduce",
+      "type": "dropdown",
+      "sub_nav": [
+        {
+          "name": "소개",
+          "link": "/about/introduction/introduce",
+          "sub_dropdown_nav": [
+            {
+              "name": "방송콘텐츠진흥재단 소개",
+              "link": "/about/introduction/introduce"
+            },
+            {
+              "name": "연혁",
+              "link": "/about/introduction/history"
+            },
+            {
+              "name": "재단 CI",
+              "link": "/about/introduction/ci"
+            }
+          ]
+        },
+        {
+          "name": "조직도",
+          "link": "/about/organization",
+          "data": []
+        },
+        {
+          "name": "후원안내",
+          "link": "/donation",
+          "data": []
+        },
+        {
+          "name": "오시는 길",
+          "link": "/about/directions",
+          "data": []
+        }
+      ]
+    },
+    {
+      "nav_name": "공지사항",
+      "link": "/post/notice",
+      "type": "dropdown",
+      "sub_nav": [
+        {
+          "name": "사업공고 및 소식",
+          "link": "/post/notice"
+        },
+        {
+          "name": "보도자료",
+          "link": "/post/press"
+        }
+      ]
+    }
+  ]
+}

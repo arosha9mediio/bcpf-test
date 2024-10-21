@@ -1,0 +1,115 @@
+fragment ApplicantCommonParts on ContestApply {
+  id
+  contestId
+  contestType
+  contestTypeSub
+  channelLink
+  applyNumber
+  programTitle
+  programGenre
+  programRuntime
+  programChannel
+  programCount
+  programRuntimeTotal
+  programHasContractWithCompany
+  experienceMediaEduYn
+  applyOtherOrgYn
+  trailerUrl
+  applier1Name
+  applier1Mobile
+  applier1Email
+  applier1Role
+  applier1Birth
+  applier1Company
+  applier1Carrier
+  applier1Etc
+  applier2Name
+  applier2Mobile
+  applier2Email
+  applier2Role
+  applier2Birth
+  applier2Company
+  applier2Carrier
+  applier2Etc
+  companyName
+  companyNameEng
+  companyPin
+  companyZip
+  companyAddress
+  companyAsk
+  companyParticipantsAge
+  companyIntroduce
+  companyParticipants
+  companyAttWhy
+  companyAttDate
+  companyPhone
+  companyCeo
+  companyCeoMobile
+  passChasu
+  passStatus
+  file {
+    url
+    filename
+    type
+    key
+  }
+  userId
+  createdAt
+  updatedAt
+  applierType
+  applier1Zip
+  applier1Address
+  applier2Zip
+  applier2Address
+  applier1School
+  applier1Scholar
+  applier1SchoolEtc
+  applier1Age
+  applier1Gender
+  applier2Gender
+  applyBCPFYn
+  howToCome
+
+  Contest {
+    ...ContestCommonParts
+  }
+}
+
+mutation createApplicant($input: CreateApplicantDTO!) {
+  createApplication(input: $input) {
+    id
+  }
+}
+query ApplicationFeed($pageRequest: PaginatedRequest) {
+  applicationFeed(pageRequest: $pageRequest) {
+    list {
+      ...ApplicantCommonParts
+    }
+    page
+    pageSize
+    pageCount
+    itemCount
+    hasNextPage
+    hasPreviousPage
+  }
+}
+mutation updateApplication($input: UpdateApplicationDTO!) {
+  updateApplication(input: $input) {
+    id
+  }
+}
+query findApplication($id: ID!) {
+  findApplication(id: $id) {
+    ...ApplicantCommonParts
+  }
+}
+
+query getApplicationByContest($id: ID!) {
+  getApplicationByContest(contestId: $id) {
+    ...ApplicantCommonParts
+  }
+}
+
+mutation deleteApplication($id: ID!) {
+  deleteApplication(id: $id)
+}

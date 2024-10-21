@@ -1,0 +1,46 @@
+fragment DonationCommonParts on Donation {
+  id
+  names
+  type
+  year
+  month
+  price
+  createdAt
+  updatedAt
+}
+
+mutation createDonation($input: CreateDonationDTO!) {
+  createDonation(input: $input) {
+    id
+  }
+}
+
+query findDonation($id: ID!) {
+  findDonation(id: $id) {
+    ...DonationCommonParts
+  }
+}
+
+query donationFeed($pageRequest: PaginatedRequest) {
+  donationFeed(pageRequest: $pageRequest) {
+    list {
+      ...DonationCommonParts
+    }
+    page
+    pageSize
+    pageCount
+    itemCount
+    hasNextPage
+    hasPreviousPage
+  }
+}
+
+mutation updateDonation($input: UpdateDonationDTO!) {
+  updateDonation(input: $input) {
+    id
+  }
+}
+
+mutation deleteDonation($id: ID!) {
+  deleteDonation(id: $id)
+}

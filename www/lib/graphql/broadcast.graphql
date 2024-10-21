@@ -1,0 +1,50 @@
+fragment BroadcastCommonParts on WorkSupport {
+  id
+  type
+  title
+  genre
+  summaryInfo
+  broadcast
+  theatersDate
+  productionSupportDate
+  producer
+  publishers
+  vimeoUrl
+  synopsis
+  production
+  configuration
+  plan
+  shooting
+  edit
+  producers
+  awards
+  previewUrl
+  img1
+  img2
+  img3
+  img4
+  img5
+  statusId
+  createdAt
+  updatedAt
+}
+
+query findBroadcast($id: ID!) {
+  findBroadcast(id: $id) {
+    ...BroadcastCommonParts
+  }
+}
+
+query broadcastFeed($pageRequest: PaginatedRequest) {
+  broadcastFeed(paginatedRequest: $pageRequest) {
+    list {
+      ...BroadcastCommonParts
+    }
+    page
+    pageSize
+    pageCount
+    itemCount
+    hasNextPage
+    hasPreviousPage
+  }
+}

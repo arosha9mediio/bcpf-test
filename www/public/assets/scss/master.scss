@@ -1,0 +1,119 @@
+@import "utils/variables";
+@import "utils/mixin";
+@import "utils/space";
+@import "utils/animation";
+@import "utils/theme";
+@import "utils/theme-dark";
+
+@import "components/button";
+@import "components/title";
+@import "components/menu";
+@import "components/modal";
+@import "components/cursor";
+@import "components/switcher";
+
+@import "layout/header";
+@import "layout/offcanvas";
+@import "layout/hero";
+@import "layout/slider";
+@import "layout/about";
+@import "layout/service";
+@import "layout/counter";
+@import "layout/workflow";
+@import "layout/brand";
+@import "layout/testimonial";
+@import "layout/portfolio";
+@import "layout/portfolio-2";
+@import "layout/blog";
+@import "layout/cta";
+@import "layout/story";
+@import "layout/team";
+@import "layout/solution";
+@import "layout/development";
+@import "layout/award";
+@import "layout/faq";
+@import "layout/home-9";
+@import "layout/video";
+@import "layout/client";
+@import "layout/career";
+@import "layout/feature";
+@import "layout/contact";
+@import "layout/price";
+@import "layout/error";
+@import "layout/home-5";
+@import "layout/footer";
+@import "components/preloader";
+@import "layout/home-6";
+@import "layout/home-7";
+@import "layout/home-11";
+@import "utils/dir-rtl";
+@import "layout/broadcast";
+@import "layout/notice";
+@import "layout/history";
+@import "layout/mypage";
+@import "layout/gallery";
+
+.cms-view {
+  img {
+    width: 100%;
+  }
+
+  ul {
+    li {
+      list-style-type: disc;
+    }
+  }
+
+  ol {
+    li {
+      list-style-type: decimal;
+
+      li {
+        list-style-type: lower-alpha;
+      }
+    }
+  }
+}
+
+.container {
+  @media #{$sm} {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+.table {
+  width: 100%;
+  padding: 0px;
+  border-bottom: 1px solid #999999;
+  margin: 1em 0 1em 0;
+
+  th {
+    border-top: 1px solid #999999;
+    padding: 8px;
+    margin: 0px;
+    font-weight: 500;
+
+    // height: 10px;
+    p {
+      padding: 0px;
+      margin: 0px;
+    }
+  }
+
+  td {
+    border-top: 1px solid #999999;
+    padding: 8px;
+    margin: 0px;
+
+    // height: 10px;
+    p {
+      padding: 0px;
+      margin: 0px;
+    }
+  }
+}
+
+a {
+  cursor: "pointer";
+}

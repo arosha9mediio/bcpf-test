@@ -1,0 +1,2 @@
+# Fragment imports from different NPM packages
+-> https://github.com/dotansimha/graphql-code-generator/issues/4307

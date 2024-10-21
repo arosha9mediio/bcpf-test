@@ -1,0 +1,136 @@
+fragment DoctorFullParts on User {
+  id
+  status
+  UserProfile {
+    userId
+    name
+    avatarPath
+    description
+    timezone
+    phone
+  }
+}
+
+# query landingPage {
+#   landingPage {
+#     id
+#     Specialties {
+#       specialtyId
+#       Specialty {
+#         id
+#         baseName
+#         picture
+#       }
+#     }
+#     Doctors {
+#       ...DoctorFullParts
+#     }
+#     Posts {
+#       ...PostCommonParts
+#     }
+#   }
+# }
+
+fragment PostCommonParts on Post {
+  id
+  categoryId
+  Category {
+    title
+  }
+  topicId
+  type
+  sort
+  title
+  subTitle
+  description
+  views
+  body
+  description
+  publishedAt
+  publishStatus
+  slug
+  language
+  unpublishedAt
+  noticeType
+  likeCount
+  commentCount
+  pin
+  keywords
+  metaDescription
+  tags
+  User {
+    ...DoctorFullParts
+  }
+  file {
+    url
+    filename
+    type
+  }
+  createdAt
+  createdBy
+}
+
+query postFeed($pageRequest: PaginatedRequest) {
+  postFeed(pageRequest: $pageRequest) {
+    list {
+      ...PostCommonParts
+    }
+    page
+    pageSize
+    pageCount
+    itemCount
+    hasNextPage
+    hasPreviousPage
+  }
+}
+
+query findPost($id: String!) {
+  findPost(id: $id) {
+    ...PostCommonParts
+  }
+}
+
+mutation createPost($input: CreatePostDTO!) {
+  createPost(input: $input) {
+    id
+  }
+}
+
+mutation updatePost($input: UpdatePostDTO!) {
+  updatePost(input: $input) {
+    id
+  }
+}
+
+mutation deletePost($id: ID!) {
+  deletePost(id: $id)
+}
+
+query isSlugExist($slug: String!) {
+  isSlugExist(slug: $slug)
+}
+
+query postFeedCount($pageRequest: PaginatedRequest) {
+  postFeed(pageRequest: $pageRequest) {
+    itemCount
+  }
+}
+
+query getAdjacentPosts($id: String!, $pageRequest: PaginatedRequest) {
+  getAdjacentPosts(id: $id, pageRequest: $pageRequest) {
+    previous {
+      id
+      title
+      slug
+      pin
+      tags
+    }
+    next {
+      id
+      title
+      slug
+      pin
+      tags
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "nav": [
+    {
+      "nav_name": "Home",
+      "link": "/en/home",
+      "type": "",
+      "sub_nav": []
+    },
+    {
+      "nav_name": "About Us",
+      "link": "/en/about/introduction/introduce",
+      "type": "",
+      "sub_nav": []
+    },
+    {
+      "nav_name": "Projects",
+      "link": "/en/content/promotion/drama-contest",
+      "type": "dropdown",
+      "sub_nav": [
+        {
+          "name": "TV Drama script",
+          "link": "/en/content/promotion/drama-contest"
+        },
+        {
+          "name": "Youth Documentary",
+          "link": "/en/content/promotion/youth-documentary"
+        },
+        {
+          "name": "Documentary Production",
+          "link": "/en/content/promotion/global-documentary"
+        },
+        {
+          "name": "Creator Training",
+          "link": "/en/content/promotion/creator-training"
+        },
+        {
+          "name": "BCPF Korea Single Award",
+          "link": "/en/content/promotion/single-award"
+        },
+        {
+          "name": "Public Video",
+          "link": "/en/content/promotion/public-interest"
+        },
+        {
+          "name": "Regional Revitalization",
+          "link": "/en/content/promotion/community-project"
+        }
+      ]
+    },
+    {
+      "nav_name": "Research",
+      "link": "/en/content/research/broadcast-conference",
+      "type": "dropdown",
+      "sub_nav": [
+        {
+          "name": "Broadcast Content Conference",
+          "link": "/en/content/research/broadcast-conference"
+        },
+        {
+          "name": "Quarterly Published Research",
+          "link": "/en/content/research/publication"
+        }
+      ]
+    },
+    {
+      "nav_name": "BCPF School",
+      "link": "/en/school/introduction",
+      "type": "",
+      "sub_nav": []
+    }
+  ]
+}
